@@ -5,7 +5,7 @@ module RubyTrelloCli
     class Run
       def run
         cmd    = ARGV.shift
-        subcmd = ARGV.shift
+        subcmd = ARGV.shift.to_sym
 
         case cmd
         when 'card'

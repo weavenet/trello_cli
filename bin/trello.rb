@@ -2,4 +2,4 @@
 
 require 'ruby-trello-cli'
 
-RubyClientCli::CLI::Run.new.run
+RubyTrelloCli::CLI::Run.new.run
