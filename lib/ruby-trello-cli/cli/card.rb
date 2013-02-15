@@ -2,8 +2,6 @@ module RubyTrelloCli
   module CLI
     class Card
 
-      include Shared
-
       def initialize
         parse_options
         connect_to_trello
@@ -22,15 +20,8 @@ module RubyTrelloCli
       private
 
       def create_card
-        card = Trello::Card.new 'name'     => @options[:name],
-                                'desc'     => @options[:description],
-                                'idBoard'  => @options[:board_id],
-                                'idList'   => @options[:list_id]
-        card.save
-      end
-
-      def board_id
-        @options[:board_id]
+        cc = RubyTrelloCli::Requets::CreateCard.new
+        cc.create @options
       end
 
       def parse_options

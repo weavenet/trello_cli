@@ -1,5 +1,5 @@
 module RubyTrelloCli
-  module CLI
+  module Requests
     module Shared
 
       def connect_to_trello

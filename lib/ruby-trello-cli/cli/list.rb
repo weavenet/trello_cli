@@ -2,15 +2,17 @@ module RubyTrelloCli
   module CLI
     class List
 
-      include Shared
-
       def initialize
         parse_options
         connect_to_trello
       end
 
       def list
-        board.lists.each do |list|
+        ll = RubyTrelloCli::Requests::ListLists.new
+
+        lists = ll.list @options
+
+        lists.each do |list|
           name = list.attributes[:name]
           id   = list.attributes[:id]
 
@@ -21,14 +23,6 @@ module RubyTrelloCli
       end
 
       private
-
-      def board
-        Trello::Board.new 'id' => board_id
-      end
-
-      def board_id
-        @options[:board_id]
-      end
 
       def parse_options
         @options = {}
