@@ -2,10 +2,6 @@ module RubyTrelloCli
   module CLI
     class Card
 
-      def initialize
-        parse_options
-      end
-
       def create
         card        = create_card
         name        = card.attributes[:name]
@@ -19,6 +15,7 @@ module RubyTrelloCli
       private
 
       def create_card
+        parse_options
         cc = RubyTrelloCli::Requests::CreateCard.new
         cc.create @options
       end
