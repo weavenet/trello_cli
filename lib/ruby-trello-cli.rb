@@ -1,3 +1,4 @@
+require "trello"
 require "ruby-trello-cli/cli"
 require "ruby-trello-cli/version"
 

@@ -9,7 +9,9 @@ module RubyTrelloCli
 
         case cmd
         when 'card'
-          CLI::Card.send subcmd
+          CLI::Card.new.send subcmd
+        when 'list'
+          CLI::List.new.send subcmd
         end
       end
     end
