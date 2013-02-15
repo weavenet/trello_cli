@@ -1,7 +1,2 @@
-module RubyClientCli
-  class CLI
-    def start
-      puts 'test123'
-    end
-  end
-end
+require 'ruby-trello-cli/cli/card'
+require 'ruby-trello-cli/cli/run'
