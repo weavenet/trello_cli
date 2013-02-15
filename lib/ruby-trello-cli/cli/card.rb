@@ -10,16 +10,22 @@ module RubyTrelloCli
       end
 
       def create
-        puts create_card 
+        card        = create_card
+        name        = card.attributes[:name]
+        description = card.attributes[:description]
+
+        puts "Card Created."
+        puts "Name        : #{name}"
+        puts "Description : #{description}"
       end
 
       private
 
       def create_card
-        card = Trello::Board.new 'name'        => @options[:name],
-                                 'description' => @options[:description],
-                                 'idBoard'     => @options[:board_id],
-                                 'idList'      => @options[:list_id]
+        card = Trello::Card.new 'name'     => @options[:name],
+                                'desc'     => @options[:description],
+                                'idBoard'  => @options[:board_id],
+                                'idList'   => @options[:list_id]
         card.save
       end
 
@@ -43,7 +49,7 @@ module RubyTrelloCli
           end
 
           opts.on("-l", "--list [LIST]", "List Of Card") do |l|
-            @options[:list] = l
+            @options[:list_id] = l
           end
 
           opts.on("-n", "--name [NAME]", "Name Of Card") do |n|

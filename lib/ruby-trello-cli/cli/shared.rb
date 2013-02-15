@@ -1,5 +1,3 @@
-require 'ruby-trello-cli/cli/card'
-
 module RubyTrelloCli
   module CLI
     module Shared
