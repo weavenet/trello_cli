@@ -4,15 +4,10 @@ module RubyTrelloCli
 
       def initialize
         parse_options
-        connect_to_trello
       end
 
       def list
-        ll = RubyTrelloCli::Requests::ListLists.new
-
-        lists = ll.list @options
-
-        lists.each do |list|
+        list_lists.each do |list|
           name = list.attributes[:name]
           id   = list.attributes[:id]
 
@@ -23,6 +18,11 @@ module RubyTrelloCli
       end
 
       private
+
+      def list_lists
+        ll = RubyTrelloCli::Requests::ListLists.new
+        ll.list @options
+      end
 
       def parse_options
         @options = {}

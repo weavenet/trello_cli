@@ -2,6 +2,8 @@ module RubyTrelloCli
   module Requests
     class ListLists
 
+      include Shared
+
       def initialize
         connect_to_trello
       end

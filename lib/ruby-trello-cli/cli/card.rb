@@ -4,7 +4,6 @@ module RubyTrelloCli
 
       def initialize
         parse_options
-        connect_to_trello
       end
 
       def create
@@ -20,7 +19,7 @@ module RubyTrelloCli
       private
 
       def create_card
-        cc = RubyTrelloCli::Requets::CreateCard.new
+        cc = RubyTrelloCli::Requests::CreateCard.new
         cc.create @options
       end
 
