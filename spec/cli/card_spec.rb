@@ -9,9 +9,10 @@ describe RubyTrelloCli::CLI::Card do
              'desc'    => options[:description],
              'idBoard' => options[:board_id],
              'idList'  => options[:list_id] }
-    Trello::Card.should_receive(:new).with(args).
+    create_card_mock = mock 'create card'
+    RubyTrelloCli::Requests::CreateCard.stub :new => create_card_mock
+    create_card_mock.should_receive(:create).with(args).
                  and_return trello_card_mock
-    card.should_receive(:connect_to_trello)
     card.create
   end
 end

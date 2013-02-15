@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe RubyTrelloCli::CLI::Shared do
+describe RubyTrelloCli::Requests::Shared do
 
   before do 
     @object = Object.new
-    @object.extend RubyTrelloCli::CLI::Shared
+    @object.extend RubyTrelloCli::Requests::Shared
   end
   
   it "should connect to trello" do
