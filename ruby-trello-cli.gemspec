@@ -20,5 +20,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "rspec"
   gem.add_development_dependency "rake"
 
-  gem.add_runtime_dependency 'ruby-trello'
+  gem.add_runtime_dependency 'ruby-trello', '0.5.1'
 end
