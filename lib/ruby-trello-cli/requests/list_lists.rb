@@ -17,9 +17,7 @@ module RubyTrelloCli
           name = list.attributes[:name]
           id   = list.attributes[:id]
 
-          puts "Name : #{name}"
-          puts "ID   : #{id}"
-          puts "------"
+          puts "Name : #{name} ( #{id} )"
         end
       end
 
