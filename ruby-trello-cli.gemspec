@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = RubyTrelloCli::VERSION
   gem.authors       = ["Brett Weaver"]
   gem.email         = ["brett@weav.net"]
-  gem.description   = %q{Ruby Gem w/ CLI to access Trello}
-  gem.summary       = %q{Ruby Gem w/ CLI to access Trello}
-  gem.homepage      = ""
+  gem.description   = %q{Simple Trello Command Line Interface}
+  gem.summary       = %q{Simple Trello Command Line Interface}
+  gem.homepage      = "https://github.com/brettweavnet/ruby-trello-cli"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

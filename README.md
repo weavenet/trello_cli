@@ -1,30 +1,37 @@
 # RubyTrelloCli
 
-Ruby CLI to access Trello.com
+Simple Trello Command Line Interface
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Install the ruby-trello-cli gem
 
-    gem 'ruby-trello-cli'
+    gem install ruby-trello-cli
 
-And then execute:
+## Setup
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install ruby-trello-cli
-
-## Usage
-
-Get developer API key:
+Get API key:
 
     https://trello.com/1/appKey/generate
 
-Get user token:
+Get member token:
 
     https://trello.com/1/connect?key=$YOUR_API_KEY&name=MY_APP_NAME&response_type=token
+
+Set the environment variables:
+
+    TRELLO_DEVELOPER_PUBLIC_KEY=api_key
+    TRELLO_MEMBER_TOKEN=member_token
+
+## Usage
+
+The CLI takes the following form:
+
+    trello TARGET COMMAND OPTIONS
+
+For example, to list the lists for a given board id:
+
+    trello list list -b 123 
 
 ## Contributing
 
