@@ -33,6 +33,10 @@ For example, to list the lists for a given board id:
 
     trello list list -b 123 
 
+To create a card:
+
+    trello card create -b 123 -l 321 -n 'card name' -d 'card description'
+
 ## Contributing
 
 1. Fork it
