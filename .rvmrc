@@ -1,1 +1,1 @@
-rvm use ruby-1.9.3-p327@ruby-trello-cli --create
+rvm use ruby-1.9.3-p327@trello-cli --create
