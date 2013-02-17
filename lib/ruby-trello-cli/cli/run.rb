@@ -6,7 +6,7 @@ module RubyTrelloCli
         cmd    = ARGV.shift || 'help'
 
         case target
-        when 'card', 'list'
+        when *targets
           target_object = CLI.const_get(target.capitalize).new
 
           cmd = 'help' unless target_object.actions.include?(cmd.to_sym)
