@@ -1,4 +1,4 @@
-module RubyTrelloCli
+module TrelloCli
   module CLI
     class Card
 
@@ -23,7 +23,7 @@ module RubyTrelloCli
       private
 
       def create_card
-        cc = RubyTrelloCli::Requests::CreateCard.new
+        cc = TrelloCli::Requests::CreateCard.new
         cc.create @options
       end
 

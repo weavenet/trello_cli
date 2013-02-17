@@ -1,4 +1,4 @@
-module RubyTrelloCli
+module TrelloCli
   module Requests
     class CreateCard
 

@@ -1,12 +1,12 @@
-# RubyTrelloCli
+# TrelloCli
 
 Simple Trello Command Line Interface
 
 ## Installation
 
-Install the ruby-trello-cli gem
+Install the trello-cli gem
 
-    gem install ruby-trello-cli
+    gem install trello-cli
 
 ## Setup
 

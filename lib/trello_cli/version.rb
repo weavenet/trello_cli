@@ -1,3 +1,3 @@
-module RubyTrelloCli
+module TrelloCli
   VERSION = "0.0.1"
 end

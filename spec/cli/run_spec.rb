@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe RubyTrelloCli::CLI::Run do
+describe TrelloCli::CLI::Run do
 
   before do
     @card_mock = mock 'card'
-    RubyTrelloCli::CLI::Card.stub :new => @card_mock
+    TrelloCli::CLI::Card.stub :new => @card_mock
   end
 
   it "should call the given target with sub command" do
@@ -13,7 +13,7 @@ describe RubyTrelloCli::CLI::Run do
 
     @card_mock.stub :actions => [:create]
     @card_mock.should_receive(:create)
-    cli = RubyTrelloCli::CLI::Run.new
+    cli = TrelloCli::CLI::Run.new
     cli.run
   end
 
@@ -23,7 +23,7 @@ describe RubyTrelloCli::CLI::Run do
 
     @card_mock.stub :actions => [:create]
     @card_mock.should_receive(:help)
-    cli = RubyTrelloCli::CLI::Run.new
+    cli = TrelloCli::CLI::Run.new
     cli.run
   end
 
@@ -31,7 +31,7 @@ describe RubyTrelloCli::CLI::Run do
     ARGV.should_receive(:shift).and_return('bad_target')
     ARGV.should_receive(:shift).and_return('create')
 
-    cli = RubyTrelloCli::CLI::Run.new
+    cli = TrelloCli::CLI::Run.new
     cli.should_receive(:puts).with "Unkown target: 'bad_target'."
     cli.should_receive(:puts).with "trello [board|card|list] [command] OPTIONS"
     cli.should_receive(:puts).with "Append -h for help on specific target."

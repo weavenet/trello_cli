@@ -1,16 +1,16 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'ruby-trello-cli/version'
+require 'trello_cli/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "ruby-trello-cli"
-  gem.version       = RubyTrelloCli::VERSION
+  gem.name          = "trello-cli"
+  gem.version       = TrelloCli::VERSION
   gem.authors       = ["Brett Weaver"]
   gem.email         = ["brett@weav.net"]
   gem.description   = %q{Simple Trello Command Line Interface}
   gem.summary       = %q{Simple Trello Command Line Interface}
-  gem.homepage      = "https://github.com/brettweavnet/ruby-trello-cli"
+  gem.homepage      = "https://github.com/brettweavnet/trello-cli"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

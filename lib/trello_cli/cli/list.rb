@@ -1,4 +1,4 @@
-module RubyTrelloCli
+module TrelloCli
   module CLI
     class List
 
@@ -22,7 +22,7 @@ module RubyTrelloCli
       private
 
       def list_lists
-        ll = RubyTrelloCli::Requests::ListLists.new
+        ll = TrelloCli::Requests::ListLists.new
         ll.list @options
       end
 

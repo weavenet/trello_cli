@@ -1,4 +1,4 @@
-module RubyTrelloCli
+module TrelloCli
   module CLI
     class Run
       def run
@@ -13,7 +13,7 @@ module RubyTrelloCli
 
           target_object.send cmd 
         when '-v'
-          puts RubyTrelloCli::VERSION
+          puts TrelloCli::VERSION
         else
           puts "Unkown target: '#{target}'." unless target == '-h'
           puts "trello [#{targets.join('|')}] [command] OPTIONS"
@@ -24,7 +24,7 @@ module RubyTrelloCli
       private
 
       def targets
-        klasses = RubyTrelloCli::CLI.constants.reject do |c| 
+        klasses = TrelloCli::CLI.constants.reject do |c| 
           ( c == :Run ) || ( c == :Shared )
         end
         klasses.map { |k| k.to_s.downcase }

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe RubyTrelloCli::Requests::CreateCard do
+describe TrelloCli::Requests::CreateCard do
   before do
     Trello.should_receive(:configure)
   end
@@ -19,7 +19,7 @@ describe RubyTrelloCli::Requests::CreateCard do
                  with(options).
                  and_return trello_card_mock
     trello_card_mock.should_receive(:save)
-    create_card = RubyTrelloCli::Requests::CreateCard.new
+    create_card = TrelloCli::Requests::CreateCard.new
     create_card.create args
   end
 end

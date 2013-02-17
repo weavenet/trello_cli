@@ -1,4 +1,4 @@
-module RubyTrelloCli
+module TrelloCli
   module CLI
     class Board
 
@@ -20,7 +20,7 @@ module RubyTrelloCli
       private
 
       def list_boards
-        lb = RubyTrelloCli::Requests::ListBoards.new
+        lb = TrelloCli::Requests::ListBoards.new
         lb.list
       end
 

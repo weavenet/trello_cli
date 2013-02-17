@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'ruby-trello-cli'
+require 'trello_cli'
 
-RubyTrelloCli::CLI::Run.new.run
+TrelloCli::CLI::Run.new.run
