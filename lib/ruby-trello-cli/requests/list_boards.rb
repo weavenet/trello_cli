@@ -9,12 +9,6 @@ module RubyTrelloCli
       end
 
       def list
-        all
-      end
-
-      private
-
-      def all
         Trello::Board.all
       end
 
