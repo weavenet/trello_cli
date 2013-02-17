@@ -16,6 +16,10 @@ module RubyTrelloCli
         card.save
       end
 
+      def actions
+        [:create]
+      end
+
     end
   end
 end

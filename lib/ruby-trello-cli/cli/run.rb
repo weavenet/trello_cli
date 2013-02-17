@@ -6,12 +6,9 @@ module RubyTrelloCli
         cmd    = ARGV.shift.to_sym
 
         case target
-        when 'card'
-          card = CLI::Card.new
-          card.send cmd if card.local_methods.include? cmd
-        when 'list'
-          list = CLI::List.new
-          list.send cmd if list.local_methods.include? cmd
+        when 'create', 'list'
+          target_object = CLI.const_get(target.capitalize).new
+          target_object.send cmd if target_object.actions.include? cmd
         when '-v'
           puts RubyTrelloCli::VERSION
         else
@@ -24,7 +21,9 @@ module RubyTrelloCli
       private
 
       def targets
-        klasses = RubyTrelloCli::CLI.constants.reject { |c| c == :Run }
+        klasses = RubyTrelloCli::CLI.constants.reject do |c| 
+          ( c == :Run ) || ( c == :Shared )
+        end
         klasses.map { |k| k.to_s.downcase }
       end
 

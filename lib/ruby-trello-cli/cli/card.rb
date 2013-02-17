@@ -2,6 +2,8 @@ module RubyTrelloCli
   module CLI
     class Card
 
+      include Shared
+
       def create
         card        = create_card
         name        = card.attributes[:name]

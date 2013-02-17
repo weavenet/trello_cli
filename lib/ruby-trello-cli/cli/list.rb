@@ -2,6 +2,8 @@ module RubyTrelloCli
   module CLI
     class List
 
+      include Shared
+
       def initialize
         parse_options
       end
