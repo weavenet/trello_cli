@@ -5,7 +5,7 @@ module RubyTrelloCli
       include Shared
 
       def initialize
-        parse_options
+        @options = {}
       end
 
       def list
@@ -24,18 +24,16 @@ module RubyTrelloCli
         ll.list @options
       end
 
-      def parse_options
-        @options = {}
-
+      def option_parser(options=@options)
         OptionParser.new do |opts|
 
           opts.banner = "Usage: ruby-trello-cli list [list] [options]"
 
           opts.on("-b", "--board [BOARD]", "Trello Board Id") do |b|
-            @options[:board_id] = b
+            options[:board_id] = b
           end
 
-        end.parse!
+        end
       end
 
     end

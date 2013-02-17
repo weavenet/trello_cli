@@ -4,6 +4,10 @@ module RubyTrelloCli
 
       include Shared
 
+      def initialize
+        @options = {}
+      end
+
       def create
         card        = create_card
         name        = card.attributes[:name]
@@ -22,31 +26,28 @@ module RubyTrelloCli
         cc.create @options
       end
 
-      def parse_options
-        @options = {}
-
+      def option_parser(options=@options)
         OptionParser.new do |opts|
-
           opts.banner = "Usage: ruby-trello-cli card [create] [options]"
 
           opts.on("-b", "--board [BOARD]", "Trello Board Id") do |b|
-            @options[:board_id] = b
+            options[:board_id] = b
           end
 
           opts.on("-d", "--description [DESCRIPTION]", "Description Of Card") do |d|
-            @options[:description] = d
+            options[:description] = d
           end
 
           opts.on("-l", "--list [LIST]", "List Of Card") do |l|
-            @options[:list_id] = l
+            options[:list_id] = l
           end
 
           opts.on("-n", "--name [NAME]", "Name Of Card") do |n|
-            @options[:name] = n
+            options[:name] = n
           end
-
-        end.parse!
+        end
       end
+        
 
     end
   end

@@ -3,12 +3,15 @@ module RubyTrelloCli
     class Run
       def run
         target = ARGV.shift
-        cmd    = ARGV.shift.to_sym
+        cmd    = ARGV.shift || 'help'
 
         case target
-        when 'create', 'list'
+        when 'card', 'list'
           target_object = CLI.const_get(target.capitalize).new
-          target_object.send cmd if target_object.actions.include? cmd
+
+          cmd = 'help' unless target_object.actions.include?(cmd.to_sym)
+
+          target_object.send cmd 
         when '-v'
           puts RubyTrelloCli::VERSION
         else
