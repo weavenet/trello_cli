@@ -31,7 +31,11 @@ The CLI takes the following form:
 
     trello TARGET COMMAND OPTIONS
 
-For example, to list the lists for a given board id:
+For example, to list the boards available to the given credentials:
+
+    trello board list
+
+to list the lists for a given board id:
 
     trello list list -b 123 
 
