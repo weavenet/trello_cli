@@ -37,7 +37,7 @@ For example, to list the boards available to the given credentials:
 
 to list the lists for a given board id:
 
-    trello list list -b 123 
+    trello list list -b 123
 
 To create a card:
 

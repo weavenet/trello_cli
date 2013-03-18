@@ -4,7 +4,7 @@ describe TrelloCli::CLI::Run do
 
   before do
     @card_mock = mock 'card'
-    TrelloCli::CLI::Card.stub :new => @card_mock
+    TrelloCli::CLI::Commands::Card.stub :new => @card_mock
   end
 
   it "should call the given target with sub command" do
