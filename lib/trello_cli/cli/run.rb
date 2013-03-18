@@ -7,11 +7,16 @@ module TrelloCli
 
         case target
         when *targets
-          target_object = CLI.const_get(target.capitalize).new
+          target_object = CLI::Commands.const_get(target.capitalize).new
 
           cmd = 'help' unless target_object.actions.include?(cmd.to_sym)
 
-          target_object.send cmd 
+          begin
+            target_object.send cmd 
+          rescue OptionParser::InvalidOption, Trello::Error => e
+            puts e.message
+            exit 1
+          end
         when '-v'
           puts TrelloCli::VERSION
         else
@@ -25,7 +30,7 @@ module TrelloCli
 
       def targets
         klasses = TrelloCli::CLI.constants.reject do |c| 
-          ( c == :Run ) || ( c == :Shared )
+          ( c == :Run ) || ( c == :Commands )
         end
         klasses.map { |k| k.to_s.downcase }
       end
