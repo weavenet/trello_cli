@@ -10,7 +10,7 @@ module TrelloCli
 
       def list(args)
         list = Trello::List.new 'idBoard' => args[:board_id],
-                                'idList'  => args[:id]
+                                'id'      => args[:list_id]
         list.cards
       end
 

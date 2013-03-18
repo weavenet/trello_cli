@@ -18,7 +18,7 @@ Get API key:
 
 Get member token:
 
-    https://trello.com/1/connect?key=$YOUR_API_KEY&name=MY_APP_NAME&response_type=token
+    https://trello.com/1/connect?key=YOUR_API_KEY&name=trello-cli&response_type=token
 
 Set the environment variables:
 

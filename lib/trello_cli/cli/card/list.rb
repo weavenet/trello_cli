@@ -10,7 +10,11 @@ module TrelloCli
         def run
           option_parser.parse!
 
-          puts list_cards
+          list_cards.each do |card|
+            puts "| Name: #{card.name}"
+            puts "| Description: #{card.name}"
+            puts "|------------------------"
+          end
         end
 
         private
