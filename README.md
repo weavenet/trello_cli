@@ -16,9 +16,13 @@ Get API key:
 
     https://trello.com/1/appKey/generate
 
-Get member token:
+Get read only member token:
 
-    https://trello.com/1/connect?key=$YOUR_API_KEY&name=MY_APP_NAME&response_type=token
+    https://trello.com/1/connect?key=YOUR_API_KEY&name=trello-cli&response_type=token
+
+Get read / write member token:
+
+    https://trello.com/1/authorize?key=YOUR_API_KEY&name=trello-cli=1day&response_type=token&scope=read,write
 
 Set the environment variables:
 
@@ -37,7 +41,7 @@ For example, to list the boards available to the given credentials:
 
 to list the lists for a given board id:
 
-    trello list list -b 123 
+    trello list list -b 123
 
 To create a card:
 

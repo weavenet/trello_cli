@@ -1,6 +1,6 @@
 require 'optparse'
 
-require 'trello_cli/cli/shared'
+require 'trello_cli/cli/commands'
 require 'trello_cli/cli/run'
 
 require 'trello_cli/cli/board'
