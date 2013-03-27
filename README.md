@@ -37,25 +37,36 @@ The CLI takes the following form:
 
 To see a list of targets:
 
-    trello -h
+    # trello -h
+    trello [board|card|list] [command] OPTIONS
+    Append -h for help on specific target.
 
 To see a list of commands for a given target:
 
-    trello card -h
+    # trello card -h
+    Valid commands for card: create, list
+    For further help, append -h to sub command.
 
 To see help for a specific command:
 
-    trello card create -h
+    # trello card create -h
+    Usage: trello card [create] [options]
+        -b, --board [BOARD]              Trello Board Id
+        -d, --description [DESCRIPTION]  Description Of Card
+        -l, --list [LIST]                List Of Card
+        -n, --name [NAME]                Name Of Card
 
-For example, to list the boards available to the given credentials:
+## Examples
+
+List the boards available to the given credentials:
 
     trello board list
 
-to list the lists for a given board id:
+List the lists for a given board id:
 
     trello list list -b 123
 
-To create a card:
+Create a card:
 
     trello card create -b 123 -l 321 -n 'card name' -d 'card description'
 
