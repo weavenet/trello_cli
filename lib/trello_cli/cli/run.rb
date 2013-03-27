@@ -12,7 +12,7 @@ module TrelloCli
           cmd = 'help' unless target_object.actions.include?(cmd.to_sym)
 
           begin
-            target_object.send cmd 
+            target_object.send cmd
           rescue OptionParser::InvalidOption, Trello::Error => e
             puts e.message
             exit 1
@@ -29,7 +29,7 @@ module TrelloCli
       private
 
       def targets
-        klasses = TrelloCli::CLI.constants.reject do |c| 
+        klasses = TrelloCli::CLI.constants.reject do |c|
           ( c == :Run ) || ( c == :Commands )
         end
         klasses.map { |k| k.to_s.downcase }

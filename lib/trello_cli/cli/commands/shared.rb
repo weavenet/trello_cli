@@ -11,8 +11,12 @@ module TrelloCli
           TrelloCli::CLI::Commands::Shared.instance_methods
         end
 
+        def target_name
+          self.class.name.downcase.split('::').last
+        end
+
         def help
-          puts "Valid Sub Commands: #{actions.join(' ')}"
+          puts "Valid commands for #{target_name}: #{actions.join(', ')}"
           puts "For further help, append -h to sub command."
         end
 

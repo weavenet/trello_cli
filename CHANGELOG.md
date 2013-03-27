@@ -1,3 +1,7 @@
+## 0.0.3:
+
+* Fixed help
+
 ## 0.0.2:
 
 * Refactored CLI

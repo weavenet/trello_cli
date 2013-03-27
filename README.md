@@ -35,6 +35,18 @@ The CLI takes the following form:
 
     trello TARGET COMMAND OPTIONS
 
+To see a list of targets:
+
+    trello -h
+
+To see a list of commands for a given target:
+
+    trello card -h
+
+To see help for a specific command:
+
+    trello card create -h
+
 For example, to list the boards available to the given credentials:
 
     trello board list
