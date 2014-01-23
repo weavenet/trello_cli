@@ -22,7 +22,7 @@ Get read only member token:
 
 Get read / write member token:
 
-    https://trello.com/1/authorize?key=YOUR_API_KEY&name=trello-cli&expires=1day&response_type=token&scope=read,write
+    https://trello.com/1/authorize?key=YOUR_API_KEY&name=trello-cli&expiration=never&response_type=token&scope=read,write
 
 Set the environment variables:
 
