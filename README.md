@@ -12,9 +12,14 @@ Install the trello_cli gem
 
 ## Setup
 
-Get API key:
+Sign-in to trello.com as the user you want to use for trello_cli.
+
+Get API key (open this link in a web browser):
 
     https://trello.com/1/appKey/generate
+    
+    	The top field contains your Developer API Key.  
+    	Use it to replace YOUR_API_KEY in the links below.
 
 Get read only member token:
 
