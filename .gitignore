@@ -1,6 +1,5 @@
 *.gem
 *.rbc
-.ruby-*
 .rvmrc
 .bundle
 .config
