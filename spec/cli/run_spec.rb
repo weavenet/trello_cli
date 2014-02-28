@@ -3,7 +3,7 @@ require 'spec_helper'
 describe TrelloCli::CLI::Run do
 
   before do
-    @card_mock = mock 'card'
+    @card_mock = double 'card'
     TrelloCli::CLI::Commands::Card.stub :new => @card_mock
   end
 

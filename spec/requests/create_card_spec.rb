@@ -14,7 +14,7 @@ describe TrelloCli::Requests::CreateCard do
                 'desc'    => args[:description],
                 'idBoard' => args[:board_id],
                 'idList'  => args[:list_id] }
-    trello_card_mock = mock 'trello card'
+    trello_card_mock = double 'trello card'
     Trello::Card.should_receive(:new).
                  with(options).
                  and_return trello_card_mock

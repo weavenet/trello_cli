@@ -6,7 +6,7 @@ describe TrelloCli::Requests::ListLists do
   end
 
   it "should list the lists for given board" do
-    trello_board_mock = mock 'new'
+    trello_board_mock = double 'new'
     Trello::Board.should_receive(:new).with('id' => '123').
                   and_return trello_board_mock
     trello_board_mock.stub :lists => ['321']
