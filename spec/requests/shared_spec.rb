@@ -8,7 +8,7 @@ describe TrelloCli::Requests::Shared do
   end
 
   it "should connect to trello" do
-    trello_configure_mock = mock 'trello_configure'
+    trello_configure_mock = double 'trello_configure'
     Trello.should_receive(:configure).and_yield trello_configure_mock
     trello_configure_mock.should_receive(:developer_public_key=).
                           with('key')

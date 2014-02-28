@@ -10,7 +10,7 @@ describe TrelloCli::Requests::ListCards do
              :list_id     => '321' }
     options = { 'idBoard' => args[:board_id],
                 'id'      => args[:list_id] }
-    trello_list_mock = mock 'trello list'
+    trello_list_mock = double 'trello list'
     Trello::List.should_receive(:new).
                  with(options).
                  and_return trello_list_mock
