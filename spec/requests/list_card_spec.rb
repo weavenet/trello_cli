@@ -15,7 +15,6 @@ describe TrelloCli::Requests::ListCards do
                  with(options).
                  and_return trello_list_mock
     trello_list_mock.should_receive(:cards)
-    list_cards = TrelloCli::Requests::ListCards.new
-    list_cards.list args
+    subject.list args
   end
 end

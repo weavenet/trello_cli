@@ -10,7 +10,6 @@ describe TrelloCli::Requests::ListLists do
     Trello::Board.should_receive(:new).with('id' => '123').
                   and_return trello_board_mock
     trello_board_mock.stub :lists => ['321']
-    ll = TrelloCli::Requests::ListLists.new
-    ll.list(:board_id => '123').should == ['321']
+    subject.list(:board_id => '123').should == ['321']
   end
 end
