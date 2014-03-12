@@ -1,3 +1,7 @@
+## 0.0.4:
+
+* Added move card
+
 ## 0.0.3:
 
 * Fixed help
