@@ -12,7 +12,7 @@ module TrelloCli
 
           move_card
 
-          puts "Card moved to #{list_id}."
+          puts "Card '#{@options[:card_id]}' moved to list '#{@options[:list_id]}'."
         end
 
         private
