@@ -19,7 +19,7 @@ Get API key (open this link in a web browser):
     https://trello.com/1/appKey/generate
     
     	The top field contains your Developer API Key.  
-    	Use it to replace YOUR_API_KEY in the member token links below.
+    	Use it to replace YOUR_API_KEY in the member token links below.  
       Set TRELLO_DEVELOPER_PUBLIC_KEY environment variable to it.
 
 Get a read only member token:
