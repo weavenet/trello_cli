@@ -6,6 +6,7 @@ module TrelloCli
         include Shared
 
         def list
+          ensure_credential_envs_set
           TrelloCli::CLI::List::List.new.run
         end
 

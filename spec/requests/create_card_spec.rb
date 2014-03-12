@@ -19,7 +19,6 @@ describe TrelloCli::Requests::CreateCard do
                  with(options).
                  and_return trello_card_mock
     trello_card_mock.should_receive(:save)
-    create_card = TrelloCli::Requests::CreateCard.new
-    create_card.create args
+    subject.create args
   end
 end
