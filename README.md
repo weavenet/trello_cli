@@ -32,8 +32,8 @@ Get a read / write member token:
 
 Set the environment variables:
 
-    TRELLO_DEVELOPER_PUBLIC_KEY=api_key
-    TRELLO_MEMBER_TOKEN=member_token
+    export TRELLO_DEVELOPER_PUBLIC_KEY=api_key
+    export TRELLO_MEMBER_TOKEN=member_token
 
 ## Usage
 
