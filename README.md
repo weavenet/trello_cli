@@ -20,7 +20,7 @@ Get API key (open this link in a web browser):
 
 The top field contains your Developer API Key.  Use it to replace **YOUR_API_KEY** in the member token links below as well as the **TRELLO_DEVELOPER_PUBLIC_KEY** environment variable.
 
-Next, get a member token:
+Next, get a member token. You will need to replace **YOUR_API_KEY** in the links below with the API key obtained in the previous step.
 
 To get a read only member token:
 
