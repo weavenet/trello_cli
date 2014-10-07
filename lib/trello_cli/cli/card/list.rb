@@ -12,7 +12,7 @@ module TrelloCli
 
           list_cards.each do |card|
             puts "| Name: #{card.name} ( #{card.id} )"
-            puts "| Description: #{card.name}"
+            puts "| Description: #{card.description}" if @options[:description]
             puts "|------------------------"
           end
         end
@@ -33,6 +33,10 @@ module TrelloCli
 
             opts.on("-l", "--list [LIST]", "List To Query") do |l|
               @options[:list_id] = l
+            end
+
+            opts.on("-d", "--description", "Include description." ) do |o|
+              @options[:description] = o
             end
           end
         end
