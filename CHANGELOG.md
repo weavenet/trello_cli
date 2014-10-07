@@ -1,3 +1,7 @@
+## 0.1.0:
+
+* Bug fix, updated description in list
+
 ## 0.0.4:
 
 * Added move card
