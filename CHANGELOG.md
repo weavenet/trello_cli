@@ -1,4 +1,4 @@
-## 0.1.1:
+## 0.2.0:
 
 * Added option to not list closed boards
 
