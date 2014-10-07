@@ -10,9 +10,10 @@ module TrelloCli
         def run
           option_parser.parse!
 
-          list_boards.each do |list|
-            name = list.attributes[:name]
-            id   = list.attributes[:id]
+          list_boards.each do |board|
+            return unless !board.attributes[:closed] || @options[:closed]
+            name = board.attributes[:name]
+            id   = board.attributes[:id]
 
             puts "#{name} ( #{id} )"
           end
@@ -28,6 +29,10 @@ module TrelloCli
         def option_parser(options=@options)
           OptionParser.new do |opts|
             opts.banner = "Usage: trello board [list]"
+
+            opts.on("-c", "--closed", "Include closed board." ) do |o|
+              @options[:closed] = o
+            end
           end
         end
 
