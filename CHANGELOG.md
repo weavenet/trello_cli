@@ -1,3 +1,7 @@
+## 0.2.1:
+
+* Bug fix in listing closed boards
+
 ## 0.2.0:
 
 * Added option to not list closed boards
