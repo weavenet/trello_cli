@@ -13,7 +13,8 @@ module TrelloCli
 
         args[:members].each do |member_username|
           unless members.member_exists_in_board? member_username
-            raise "member does not exist in board"
+            msg = "member '#{member_username}' does not exist in board '#{@board_id}'."
+            raise Errors.new msg
           end
         end
 
