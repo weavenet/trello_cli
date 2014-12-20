@@ -64,8 +64,8 @@ To see help for a specific command:
 
 ### Output Formatters
 
-To allow for easy integration, the output of any command can format as either TSV (Tab
-Seperated Values) or JSON.
+To allow for piping output to other utilies, the output of any command can
+be format as either TSV (Tab Seperated Values) or JSON.
 
 **JSON Output**
 
@@ -76,7 +76,7 @@ Seperated Values) or JSON.
 
 This can be used with tools like [jq](http://stedolan.github.io/jq/) to parse the data:
 
-```
+```json
 # trello board list -o json |jq '.[0] | {id}'
 {
   "id": "123456781234567812345678"
