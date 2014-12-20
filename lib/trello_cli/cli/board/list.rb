@@ -15,7 +15,7 @@ module TrelloCli
               id:   b.attributes[:id] }
           end
 
-          puts TrelloCli::Formatters::BoardList.new(data).output @options[:output_format]
+          puts TrelloCli::Formatters::BoardList.new(data).output @options[:output]
         end
 
         private
@@ -37,8 +37,8 @@ module TrelloCli
               @options[:closed] = o
             end
 
-            opts.on("-o", "--output-format [OUTPUT_FORMAT]", "Output format [json|tsv|legacy]." ) do |o|
-              @options[:output_format] = o
+            opts.on("-o", "--output [OUTPUT]", "Output format [json|tsv|legacy]." ) do |o|
+              @options[:output] = o
             end
           end
         end

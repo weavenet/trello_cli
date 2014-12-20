@@ -10,12 +10,14 @@ module TrelloCli
         def run
           option_parser.parse!
 
-          list_lists.each do |list|
-            name = list.attributes[:name]
-            id   = list.attributes[:id]
-
-            puts "#{name} ( #{id} )"
+          data = list_lists.map do |l|
+            {
+              id:   l.attributes[:id],
+              name: l.attributes[:name]
+            }
           end
+
+          puts TrelloCli::Formatters::ListList.new(data).output @options[:output]
         end
 
         private
@@ -34,6 +36,9 @@ module TrelloCli
               @options[:board_id] = b
             end
 
+            opts.on("-o", "--output [OUTPUT]", "Output format [json|tsv|legacy]." ) do |o|
+              @options[:output] = o
+            end
           end
         end
 

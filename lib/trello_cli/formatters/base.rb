@@ -2,7 +2,7 @@ require 'json'
 
 module TrelloCli
   module Formatters
-    class Basic
+    class Base
       def initialize(data)
         @data = data
       end

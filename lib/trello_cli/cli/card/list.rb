@@ -31,12 +31,16 @@ module TrelloCli
               @options[:board_id] = b
             end
 
+            opts.on("-d", "--description", "Include description." ) do |o|
+              @options[:description] = o
+            end
+
             opts.on("-l", "--list [LIST]", "List To Query") do |l|
               @options[:list_id] = l
             end
 
-            opts.on("-d", "--description", "Include description." ) do |o|
-              @options[:description] = o
+            opts.on("-o", "--output [OUTPUT]", "Output format [json|tsv|legacy]." ) do |o|
+              @options[:output_format] = o
             end
           end
         end

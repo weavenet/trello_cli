@@ -1,8 +1,10 @@
 module TrelloCli
   module Formatters
-    class BoardList < Base
+    class CardList < Base
       def to_legacy
-        data.map {|d| "#{d[:name]} ( #{d[:id]} )"}.join("\n")
+        msg = "Card Created.\n"
+        msg << "Name        : #{data[:name]}\n"
+        msg << "Description : #{data[:description]}\n"
       end
 
       def to_tsv

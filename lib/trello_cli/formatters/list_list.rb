@@ -1,6 +1,6 @@
 module TrelloCli
   module Formatters
-    class BoardList < Base
+    class ListList < Base
       def to_legacy
         data.map {|d| "#{d[:name]} ( #{d[:id]} )"}.join("\n")
       end

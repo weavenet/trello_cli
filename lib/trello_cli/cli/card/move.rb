@@ -33,6 +33,10 @@ module TrelloCli
             opts.on("-l", "--list_id [LIST_ID]", "New List ID") do |l|
               @options[:list_id] = l
             end
+
+            opts.on("-o", "--output [OUTPUT]", "Output format [json|tsv|legacy]." ) do |o|
+              @options[:output_format] = o
+            end
           end
         end
 
