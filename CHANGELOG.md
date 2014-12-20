@@ -1,3 +1,9 @@
+## HEAD:
+
+* Adding JSON and TSV output formatters
+* Default output set to TSV
+* Legacy output available via -o legacy
+
 ## 0.3.0:
 
 * Add ability to assign member to card on creation
