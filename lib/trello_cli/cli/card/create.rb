@@ -11,13 +11,11 @@ module TrelloCli
           option_parser.parse!
 
           card = create_card
-          data = { id:          card.attributes[:id],
-                   name:        card.attributes[:name],
-                   descryption: card.attributes[:description] }
+          data = { id:   card.attributes[:id],
+                   name: card.attributes[:name],
+                   desc: card.attributes[:desc] }
 
-          puts "Card Created."
-          puts "Name        : #{name}"
-          puts "Description : #{description}"
+          puts TrelloCli::Formatters::CardCreate.new(data).output @options[:output]
         end
 
         private
@@ -36,7 +34,7 @@ module TrelloCli
             end
 
             opts.on("-d", "--description [DESCRIPTION]", "Description Of Card") do |d|
-              @options[:description] = d
+              @options[:desc] = d
             end
 
             opts.on("-l", "--list [LIST]", "List Of Card") do |l|
@@ -52,7 +50,7 @@ module TrelloCli
             end
 
             opts.on("-o", "--output [OUTPUT]", "Output format [json|tsv|legacy]." ) do |o|
-              @options[:output_format] = o
+              @options[:output] = o
             end
           end
         end

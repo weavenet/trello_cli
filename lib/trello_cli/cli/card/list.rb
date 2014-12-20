@@ -10,11 +10,11 @@ module TrelloCli
         def run
           option_parser.parse!
 
-          list_cards.each do |card|
-            puts "| Name: #{card.name} ( #{card.id} )"
-            puts "| Description: #{card.description}" if @options[:description]
-            puts "|------------------------"
+          data = list_cards.map do |c|
+            { name: c.name, id: c.id, desc: c.desc }
           end
+
+          puts TrelloCli::Formatters::CardList.new(data).output(@options[:output])
         end
 
         private
@@ -31,16 +31,12 @@ module TrelloCli
               @options[:board_id] = b
             end
 
-            opts.on("-d", "--description", "Include description." ) do |o|
-              @options[:description] = o
-            end
-
             opts.on("-l", "--list [LIST]", "List To Query") do |l|
               @options[:list_id] = l
             end
 
             opts.on("-o", "--output [OUTPUT]", "Output format [json|tsv|legacy]." ) do |o|
-              @options[:output_format] = o
+              @options[:output] = o
             end
           end
         end
