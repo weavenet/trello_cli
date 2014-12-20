@@ -8,9 +8,6 @@ module TrelloCli
         def create
           ensure_credential_envs_set
           TrelloCli::CLI::Card::Create.new.run
-        rescue TrelloCli::Errors => e
-          puts "error: #{e}"
-          exit 1
         end
 
         def list

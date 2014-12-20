@@ -16,6 +16,9 @@ module TrelloCli
           rescue OptionParser::InvalidOption, Trello::Error => e
             puts e.message
             exit 1
+          rescue TrelloCli::Errors => e
+            puts "error: #{e}"
+            exit 1
           rescue NoMethodError => e
             if e.message.match /SocketError/
               puts 'Please connect to the internet to access Trello'
