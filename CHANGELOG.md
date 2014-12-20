@@ -1,4 +1,4 @@
-## HEAD:
+## 0.4.0:
 
 * Adding JSON and TSV output formatters
 
