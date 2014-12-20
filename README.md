@@ -94,7 +94,7 @@ This can be used with tools like [jq](http://stedolan.github.io/jq/) to parse th
 For example, you can grep out specific cards and then cut specific fields:
 
 ```
-# trello card list -b BOARD_ID -l LIST_ID -o tsv | grep 'my-card' | cut -d$'\t' -f1
+# trello board list -o tsv |grep board1 |cut -d$'\t' -f 1
 123456781234567812345678
 ```
 
