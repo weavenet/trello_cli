@@ -82,6 +82,10 @@ Seperated Values) or JSON.
 4567  board2
 ```
 
+The default is currently set to output as legacy to match previous versions
+of the trello CLI. This will be changed to TSV or another human format in a
+future release.
+
 ## Examples
 
 List the boards available to the given credentials:
