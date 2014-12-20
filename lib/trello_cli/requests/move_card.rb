@@ -11,7 +11,7 @@ module TrelloCli
       def move(args)
         card = Trello::Card.new 'id' => args[:card_id]
         list = Trello::List.find args[:list_id]
-        card.move_to_list list
+        JSON.parse(card.move_to_list list)
       end
 
     end

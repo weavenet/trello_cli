@@ -1,3 +1,7 @@
+## HEAD:
+
+* Adding JSON and TSV output formatters
+
 ## 0.3.0:
 
 * Add ability to assign member to card on creation

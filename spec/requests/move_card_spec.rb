@@ -15,7 +15,8 @@ describe TrelloCli::Requests::MoveCard do
     Trello::List.should_receive(:find).
                  with(args[:list_id]).
                  and_return trello_list_mock
-    trello_card_mock.should_receive(:move_to_list).with(trello_list_mock)
-    subject.move args
+    trello_card_mock.should_receive(:move_to_list).with(trello_list_mock).
+                     and_return({}.to_json)
+    subject.move(args).should == {} # JSON.parses results
   end
 end

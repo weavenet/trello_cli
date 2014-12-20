@@ -62,19 +62,39 @@ To see help for a specific command:
         -l, --list [LIST]                List Of Card
         -n, --name [NAME]                Name Of Card
 
+### Output Formatters
+
+To allow for easy integration, the output of any command can format as either TSV (Tab
+Seperated Values) or JSON.
+
+**JSON Output**
+
+```json
+# trello card list -o json
+[{"name":"board1","id":"1234"},{"name":"board2","id":"4567"}]
+```
+
+**TSV Output**
+
+```
+# trello card list -o tsv
+1234  board1
+4567  board2
+```
+
 ## Examples
 
 List the boards available to the given credentials:
 
     trello board list
 
-List the lists for a given board id:
+List the lists for a given board id and output as a TSV list:
 
-    trello list list -b 123
+    trello list list -b 123 -o tsv
 
-Create a card:
+Create a card and output as JSON:
 
-    trello card create -b 123 -l 321 -n 'card name' -d 'card description'
+    trello card create -b 123 -l 321 -n 'card name' -d 'card description' -o json
 
 ## Contributing
 

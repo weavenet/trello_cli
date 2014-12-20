@@ -24,11 +24,13 @@ module TrelloCli
         end
 
         card = Trello::Card.new 'name'      => args[:name],
-                                'desc'      => args[:description],
+                                'desc'      => args[:desc],
                                 'idBoard'   => @board_id,
                                 'idList'    => args[:list_id],
                                 'idMembers' => member_ids.join(",")
         card.save
+
+        card
       end
 
       private

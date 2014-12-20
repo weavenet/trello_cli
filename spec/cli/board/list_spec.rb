@@ -22,8 +22,7 @@ describe TrelloCli::CLI::Board::List do
 
   it "should puts all boards" do
     subject.instance_variable_set(:@options, { closed: true })
-    expect(subject).to receive(:puts).with("board1 ( 1 )")
-    expect(subject).to receive(:puts).with("board2 ( 2 )")
+    expect(subject).to receive(:puts).with("board1 ( 1 )\nboard2 ( 2 )")
     subject.run
   end
 

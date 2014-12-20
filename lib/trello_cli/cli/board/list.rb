@@ -10,12 +10,12 @@ module TrelloCli
         def run
           option_parser.parse!
 
-          list_boards(@options[:closed]).each do |board|
-            name   = board.attributes[:name]
-            id     = board.attributes[:id]
-            closed = board.attributes[:closed]
-            puts "#{name} ( #{id} )"
+          data = list_boards(@options[:closed]).map do |b|
+            { name: b.attributes[:name],
+              id:   b.attributes[:id] }
           end
+
+          puts TrelloCli::Formatters::BoardList.new(data).output @options[:output]
         end
 
         private
@@ -35,6 +35,10 @@ module TrelloCli
 
             opts.on("-c", "--closed", "Include closed board." ) do |o|
               @options[:closed] = o
+            end
+
+            opts.on("-o", "--output [OUTPUT]", "Output format [json|tsv|legacy]." ) do |o|
+              @options[:output] = o
             end
           end
         end

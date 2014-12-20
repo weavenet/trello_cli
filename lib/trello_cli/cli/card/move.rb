@@ -10,9 +10,12 @@ module TrelloCli
         def run
           option_parser.parse!
 
-          move_card
+          result = move_card
+          data = { card_id: result["id"],
+                   list_id: result["idList"],
+                   success: (result["idList"] == @options[:list_id]) }
 
-          puts "Card '#{@options[:card_id]}' moved to list '#{@options[:list_id]}'."
+          puts TrelloCli::Formatters::CardMove.new(data).output @options[:output]
         end
 
         private
@@ -32,6 +35,10 @@ module TrelloCli
 
             opts.on("-l", "--list_id [LIST_ID]", "New List ID") do |l|
               @options[:list_id] = l
+            end
+
+            opts.on("-o", "--output [OUTPUT]", "Output format [json|tsv|legacy]." ) do |o|
+              @options[:output] = o
             end
           end
         end
