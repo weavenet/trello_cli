@@ -4,7 +4,7 @@ module TrelloCli
       class Create
 
         def initialize
-          @options = {}
+          @options = { members: [] }
         end
 
         def run
@@ -40,6 +40,10 @@ module TrelloCli
 
             opts.on("-l", "--list [LIST]", "List Of Card") do |l|
               @options[:list_id] = l
+            end
+
+            opts.on("-m", "--member [MEMBER_NAME]", "Member name to assign to card") do |m|
+              @options[:members] << m
             end
 
             opts.on("-n", "--name [NAME]", "Name Of Card") do |n|

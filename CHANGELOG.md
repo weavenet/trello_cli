@@ -1,3 +1,8 @@
+## 0.3.0:
+
+* Add ability to assign member to card on creation
+* Updated to ruby-trello 1.1.1
+
 ## 0.2.1:
 
 * Bug fix in listing closed boards
