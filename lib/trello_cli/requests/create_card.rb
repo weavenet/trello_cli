@@ -9,11 +9,31 @@ module TrelloCli
       end
 
       def create(args)
-        card = Trello::Card.new 'name'    => args[:name],
-                                'desc'    => args[:description],
-                                'idBoard' => args[:board_id],
-                                'idList'  => args[:list_id]
+        @board_id = args[:board_id]
+
+        args[:members].each do |member_username|
+          unless members.member_exists_in_board? member_username
+            raise "member does not exist in board"
+          end
+        end
+
+        member_ids = args[:members].map do |member_username|
+          m = members.find_member_by_username_in_board member_username
+          m.attributes[:id]
+        end
+
+        card = Trello::Card.new 'name'      => args[:name],
+                                'desc'      => args[:description],
+                                'idBoard'   => @board_id,
+                                'idList'    => args[:list_id],
+                                'idMembers' => member_ids.join(",")
         card.save
+      end
+
+      private
+
+      def members
+        @members ||= Members.new @board_id
       end
 
     end
