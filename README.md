@@ -71,15 +71,31 @@ Seperated Values) or JSON.
 
 ```json
 # trello card list -o json
-[{"name":"board1","id":"1234"},{"name":"board2","id":"4567"}]
+[{"name":"board1","id":"123456781234567812345678"},{"name":"board2","id":"876543218765432187654321"}]
+```
+
+This can be used with tools like [jq](http://stedolan.github.io/jq/) to parse the data:
+
+```
+# trello board list -o json |jq '.[0] | {id}'
+{
+  "id": "123456781234567812345678"
+}
 ```
 
 **TSV Output**
 
 ```
 # trello card list -o tsv
-1234  board1
-4567  board2
+123456781234567812345678  board1
+876543218765432187654321  board2
+```
+
+For example, you can grep out specific cards and then cut specific fields:
+
+```
+# trello card list -b BOARD_ID -l LIST_ID -o tsv | grep 'my-card' | cut -d$'\t' -f1
+123456781234567812345678
 ```
 
 The default is currently set to output as legacy to match previous versions
