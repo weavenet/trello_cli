@@ -10,13 +10,13 @@ describe TrelloCli::Requests::CreateCard do
   let(:member_struct) { Struct.new(:attributes) }
 
   before do
-    @args = { :name        => 'name',
-              :description => 'desc',
-              :board_id    => '123',
-              :list_id     => '321',
-              :members     => ["user1", "user2"] }
+    @args = { :name      => 'name',
+              :desc      => 'desc',
+              :board_id  => '123',
+              :list_id   => '321',
+              :members   => ["user1", "user2"] }
     @options = { 'name'      => @args[:name],
-                 'desc'      => @args[:description],
+                 'desc'      => @args[:desc],
                  'idBoard'   => @args[:board_id],
                  'idList'    => @args[:list_id],
                  'idMembers' => "id1,id2" }

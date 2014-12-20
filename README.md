@@ -65,12 +65,16 @@ To see help for a specific command:
 ### Output Formatters
 
 To allow for easy integration, the output of any command can format as either TSV (Tab
-Seperated Values) or JSON. For example:
+Seperated Values) or JSON.
+
+JSON Output:
 
 ```json
 # trello card list -o json
 [{"name":"board1","id":"1234"},{"name":"board2","id":"4567"}]
 ```
+
+TSV Output:
 
 ```
 # trello card list -o tsv
