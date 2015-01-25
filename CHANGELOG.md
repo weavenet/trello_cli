@@ -1,3 +1,10 @@
+## HEAD:
+
+## 0.4.1:
+
+* Removing JSON gem version.
+* Upgrade trello
+
 ## 0.4.0:
 
 * Adding JSON and TSV output formatters
