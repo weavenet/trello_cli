@@ -70,7 +70,7 @@ be format as either TSV (Tab Seperated Values) or JSON.
 **JSON Output**
 
 ```
-# trello card list -o json
+# trello board list -o json
 [{"name":"board1","id":"123456781234567812345678"},{"name":"board2","id":"876543218765432187654321"}]
 ```
 
@@ -86,7 +86,7 @@ This can be used with tools like [jq](http://stedolan.github.io/jq/) to parse th
 **TSV Output**
 
 ```
-# trello card list -o tsv
+# trello board list -o tsv
 123456781234567812345678  board1
 876543218765432187654321  board2
 ```
