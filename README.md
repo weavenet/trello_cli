@@ -117,7 +117,7 @@ Create a card and output as JSON:
     trello card create -b 123 -l 321 -n 'card name' -d 'card description' -o json
 
 If you find yourself adding the same arguments, it can be helpful to create a
-wrapper script, for example (trello.sh)[https://gist.github.com/brettweavnet/af002bde11adc8fb7b31].
+wrapper script, for example [trello.sh](https://gist.github.com/brettweavnet/af002bde11adc8fb7b31).
 
 ## Contributing
 
