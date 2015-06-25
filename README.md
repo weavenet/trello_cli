@@ -119,7 +119,7 @@ Create a card and output as JSON:
 ## Wrapper Script
 
 If you find yourself adding the same arguments, it can be helpful to create a
-wrapper script, for example [trello.sh](https://gist.github.com/brettweavnet/af002bde11adc8fb7b31).
+wrapper script. For example see [trello.sh](https://gist.github.com/brettweavnet/af002bde11adc8fb7b31).
 
 ## Contributing
 
