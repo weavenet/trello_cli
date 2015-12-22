@@ -6,8 +6,8 @@ require 'trello_cli/version'
 Gem::Specification.new do |gem|
   gem.name          = "trello_cli"
   gem.version       = TrelloCli::VERSION
-  gem.authors       = ["Brett Weaver"]
-  gem.email         = ["brett@weav.net"]
+  gem.authors       = ["brettweavnet"]
+  gem.email         = ["open-source-845@weav.net"]
   gem.description   = %q{Simple Trello Command Line Interface}
   gem.summary       = %q{Simple Trello Command Line Interface}
   gem.homepage      = "https://github.com/brettweavnet/trello_cli"
