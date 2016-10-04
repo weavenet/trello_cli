@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/brettweavnet/trello_cli.png)](http://travis-ci.org/brettweavnet/trello_cli)
+[![Build Status](https://secure.travis-ci.org/weavenet/trello_cli.png)](http://travis-ci.org/weavenet/trello_cli)
 
 # trello_cli
 
