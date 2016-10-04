@@ -10,15 +10,9 @@ Install the trello_cli gem
 
     gem install trello_cli
 
-Or install using docker
+Or install using docker via the instructions provided by **@jamesmstone**.
 
     docker pull jamesmstone/trello
-
-Usage with docker
-
-    docker run -it --rm -e TRELLO_DEVELOPER_PUBLIC_KEY={TRELLO_DEVELOPER_PUBLIC_KEY} -e TRELLO_MEMBER_TOKEN={TRELLO_MEMBER_TOKEN} jamesmstone/trello
-
-**Note:** `{TRELLO_DEVELOPER_PUBLIC_KEY}`  and `{TRELLO_MEMBER_TOKEN}` need to be substituted with your keys and tokens. see below for details.
 
 ## Setup
 
@@ -71,6 +65,12 @@ To see help for a specific command:
         -d, --description [DESCRIPTION]  Description Of Card
         -l, --list [LIST]                List Of Card
         -n, --name [NAME]                Name Of Card
+
+### Usage with docker
+
+    docker run -it --rm -e TRELLO_DEVELOPER_PUBLIC_KEY={TRELLO_DEVELOPER_PUBLIC_KEY} -e TRELLO_MEMBER_TOKEN={TRELLO_MEMBER_TOKEN} jamesmstone/trello
+
+**Note:** `{TRELLO_DEVELOPER_PUBLIC_KEY}`  and `{TRELLO_MEMBER_TOKEN}` need to be substituted with your keys and tokens. see above for details.
 
 ### Output Formatters
 
