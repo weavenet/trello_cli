@@ -68,9 +68,10 @@ To see help for a specific command:
 
 ### Usage with docker
 
-    docker run -it --rm -e TRELLO_DEVELOPER_PUBLIC_KEY={TRELLO_DEVELOPER_PUBLIC_KEY} -e TRELLO_MEMBER_TOKEN={TRELLO_MEMBER_TOKEN} jamesmstone/trello
-
-**Note:** `{TRELLO_DEVELOPER_PUBLIC_KEY}`  and `{TRELLO_MEMBER_TOKEN}` need to be substituted with your keys and tokens. see above for details.
+    docker run -it --rm \
+        -e TRELLO_DEVELOPER_PUBLIC_KEY=$TRELLO_DEVELOPER_PUBLIC_KEY \
+        -e TRELLO_MEMBER_TOKEN=$TRELLO_MEMBER_TOKEN \
+        jamesmstone/trello
 
 ### Output Formatters
 
