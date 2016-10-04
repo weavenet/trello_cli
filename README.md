@@ -10,6 +10,16 @@ Install the trello_cli gem
 
     gem install trello_cli
 
+Or install using docker
+
+    docker pull jamesmstone/trello
+
+Usage with docker
+
+    docker run -it --rm -e TRELLO_DEVELOPER_PUBLIC_KEY={TRELLO_DEVELOPER_PUBLIC_KEY} -e TRELLO_MEMBER_TOKEN={TRELLO_MEMBER_TOKEN} jamesmstone/trello
+
+**Note:** `{TRELLO_DEVELOPER_PUBLIC_KEY}`  and `{TRELLO_MEMBER_TOKEN}` need to be substituted with your keys and tokens. see below for details.
+
 ## Setup
 
 Sign-in to trello.com as the user you want to use for trello_cli.
