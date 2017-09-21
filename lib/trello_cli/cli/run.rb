@@ -31,7 +31,7 @@ module TrelloCli
           puts TrelloCli::VERSION
         else
           puts "Unkown target: '#{target}'." unless target == '-h'
-          puts "trello [#{targets.join('|')}] [command] OPTIONS"
+          puts "trello [#{targets.sort.join('|')}] [command] OPTIONS"
           puts "Append -h for help on specific target."
         end
       end

@@ -6,8 +6,8 @@ require 'trello_cli/version'
 Gem::Specification.new do |gem|
   gem.name          = "trello_cli"
   gem.version       = TrelloCli::VERSION
-  gem.authors       = ["brettweavnet"]
-  gem.email         = ["open-source-845@weav.net"]
+  gem.authors       = ["weavenet"]
+  gem.email         = ["user@example.com"]
   gem.description   = %q{Simple Trello Command Line Interface}
   gem.summary       = %q{Simple Trello Command Line Interface}
   gem.homepage      = "https://github.com/brettweavnet/trello_cli"
@@ -18,8 +18,8 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_development_dependency "rspec", "~> 2.14"
-  gem.add_development_dependency "rake", "~> 10.1"
+  gem.add_development_dependency "rspec", "~> 3.6.0"
+  gem.add_development_dependency "rake", "~> 12.1.0"
 
-  gem.add_runtime_dependency 'ruby-trello', '1.1.3'
+  gem.add_runtime_dependency 'ruby-trello', '2.0.0'
 end
