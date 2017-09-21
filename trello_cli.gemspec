@@ -18,8 +18,8 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_development_dependency "rspec", "~> 2.14"
-  gem.add_development_dependency "rake", "~> 10.1"
+  gem.add_development_dependency "rspec", "~> 3.6.0"
+  gem.add_development_dependency "rake", "~> 12.1.0"
 
   gem.add_runtime_dependency 'ruby-trello', '2.0.0'
 end
