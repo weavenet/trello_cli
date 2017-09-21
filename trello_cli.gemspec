@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
   gem.name          = "trello_cli"
   gem.version       = TrelloCli::VERSION
   gem.authors       = ["weavenet"]
-  gem.email         = ["br4321@icloud.com"]
+  gem.email         = ["user@example.com"]
   gem.description   = %q{Simple Trello Command Line Interface}
   gem.summary       = %q{Simple Trello Command Line Interface}
   gem.homepage      = "https://github.com/brettweavnet/trello_cli"
